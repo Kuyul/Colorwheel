@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WheelController2 : MonoBehaviour
+public class WheelController : MonoBehaviour
 {
     //private variables
     private bool IsDragging;
