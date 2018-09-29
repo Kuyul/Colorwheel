@@ -36,7 +36,7 @@ public class WheelController : MonoBehaviour
         {
             //calculate touch distance from the center - the wheel won't move if the touch is too close to the center
             float distance = Vector2.Distance(new Vector2(0,0), TouchPosition);
-                        Debug.Log(distance);
+
             if (distance > MinimumDistance)
             {
                 float angle = Vector2.SignedAngle(TouchPosition, Camera.main.ScreenToWorldPoint(Input.mousePosition));
