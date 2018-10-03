@@ -10,6 +10,9 @@ public class GameControl : MonoBehaviour {
     public GameObject spawnPoint;
     public GameObject[] patternPool;
 
+    public GameObject mainPanel;
+    public GameObject defaultPattern;
+
     private void Awake()
     {
         if (instance == null)
@@ -20,6 +23,8 @@ public class GameControl : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        defaultPattern.SetActive(false);
     }
 
     // Use this for initialization
@@ -36,5 +41,11 @@ public class GameControl : MonoBehaviour {
     public void EndGame()
     {
         // bla
+    }
+
+    public void PlayGame()
+    {
+        defaultPattern.SetActive(true);
+        mainPanel.SetActive(false);
     }
 }
