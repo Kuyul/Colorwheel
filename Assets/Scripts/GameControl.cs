@@ -14,6 +14,8 @@ public class GameControl : MonoBehaviour {
     public GameObject mainPanel;
     public GameObject defaultPattern;
 
+    public GameObject pe1;
+
     private void Awake()
     {
         if (instance == null)
@@ -35,8 +37,8 @@ public class GameControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-	}
+        Destroy(GameObject.Find("pe1(Clone)"), 0.5f);
+    }
 
 
 

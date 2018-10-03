@@ -10,13 +10,15 @@ public class Wheel : MonoBehaviour {
         if (gameObject.tag == collision.tag)
         {
             collision.gameObject.SetActive(false);
+            Instantiate(GameControl.instance.pe1, collision.transform.position, Quaternion.identity);
         }
+
         else
         {
             //Pattern objects have a collider attached to them, the game shouldn't end when the wheel meets the collider
             if (collision.tag != "pattern")
             {
-                GameControl.instance.EndGame();
+               // GameControl.instance.EndGame();
             }
         }
     }
