@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour {
 
@@ -29,6 +30,7 @@ public class GameControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Application.targetFrameRate = 300;
 	}
 	
 	// Update is called once per frame
@@ -40,7 +42,7 @@ public class GameControl : MonoBehaviour {
 
     public void EndGame()
     {
-        // bla
+        SceneManager.LoadScene(0);
     }
 
     public void PlayGame()

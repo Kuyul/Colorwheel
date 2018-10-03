@@ -6,49 +6,15 @@ public class Wheel : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.tag == "1")
+        //Destroy colliding gameobject if the colour of the wheel matches the sphere
+        if (gameObject.tag == collision.tag)
         {
-            if (collision.tag == "1")
-            {
-                collision.gameObject.SetActive(false);
-            }
-            else if (collision.tag != "1" && collision.tag != "pattern")
-            {
-                GameControl.instance.EndGame();
-            }
+            collision.gameObject.SetActive(false);
         }
-
-        if (gameObject.tag == "2")
+        else
         {
-            if (collision.tag == "2")
-            {
-                collision.gameObject.SetActive(false);
-            }
-            else if (collision.tag != "2" && collision.tag != "pattern")
-            {
-                GameControl.instance.EndGame();
-            }
-        }
-
-        if (gameObject.tag == "3")
-        {
-            if (collision.tag == "3")
-            {
-                collision.gameObject.SetActive(false);
-            }
-            else if (collision.tag != "3" && collision.tag != "pattern")
-            {
-                GameControl.instance.EndGame();
-            }
-        }
-
-        if (gameObject.tag == "4")
-        {
-            if (collision.tag == "4")
-            {
-                collision.gameObject.SetActive(false);
-            }
-            else if(collision.tag != "4" && collision.tag != "pattern")
+            //Pattern objects have a collider attached to them, the game shouldn't end when the wheel meets the collider
+            if (collision.tag != "pattern")
             {
                 GameControl.instance.EndGame();
             }
