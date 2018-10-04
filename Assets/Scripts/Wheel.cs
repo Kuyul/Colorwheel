@@ -18,7 +18,7 @@ public class Wheel : MonoBehaviour {
             //Pattern objects have a collider attached to them, the game shouldn't end when the wheel meets the collider
             if (collision.tag != "pattern")
             {
-               // GameControl.instance.EndGame();
+               GameControl.instance.EndGame();
             }
         }
     }

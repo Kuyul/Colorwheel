@@ -2774,7 +2774,9 @@ MonoBehaviour:
   patternScrollSpeed: 2
   spawnPoint: {fileID: 2086870930}
   patternPool:
-  - {fileID: 1870061151026602, guid: 91b9bf41562f47c4a8abc03d1b3999e6, type: 2}
+  - {fileID: 1807395390017188, guid: 7ad11d9d3cff6cd40a5238b0a958c686, type: 2}
+  - {fileID: 1760499314802848, guid: 8c6000c2c287f78448c19fef9277f384, type: 2}
+  - {fileID: 1401257743274426, guid: ae771b564f1368b43a91dd5d506c0d12, type: 2}
   mainPanel: {fileID: 77203314}
   defaultPattern: {fileID: 834522191}
   pe1: {fileID: 1833429115160542, guid: 37e41d9d05793144f9bbd6515cacc8c7, type: 2}
